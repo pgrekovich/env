@@ -1,0 +1,185 @@
+{
+    "autoimport.useSemiColon" : false,
+    "css.validate" : false,
+    "debug.internalConsoleOptions" : "openOnSessionStart",
+    "editor.accessibilitySupport" : "off",
+    "editor.bracketPairColorization.enabled" : true,
+    "editor.codeLens" : true,
+    "editor.cursorBlinking" : "phase",
+    "editor.cursorStyle" : "line",
+    "editor.detectIndentation" : true,
+    "editor.fontFamily" : "JetBrains Mono",
+    "editor.fontLigatures" : true,
+    "editor.fontSize" : 14,
+    "editor.lineNumbers" : "on",
+    "editor.minimap.enabled" : false,
+    "editor.renderControlCharacters" : false,
+    "editor.renderLineHighlight" : "all",
+    "editor.renderWhitespace" : "selection",
+    "editor.smoothScrolling" : true,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.wordSeparators" : "\/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap" : "off",
+    "explorer.openEditors.visible" : 0,
+    "files.eol" : "\n",
+    "gitlens.historyExplorer.enabled" : true,
+    "gitlens.mode.active" : "zen",
+    "gitlens.views.fileHistory.enabled" : true,
+    "gitlens.views.lineHistory.enabled" : true,
+    "html.autoClosingTags" : false,
+    "javascript.autoClosingTags" : false,
+    "javascript.preferences.importModuleSpecifier" : "non-relative",
+    "javascript.updateImportsOnFileMove.enabled" : "prompt",
+    "less.validate" : false,
+    "prettier.quoteProps" : "consistent",
+    "prettier.semi" : false,
+    "prettier.singleQuote" : true,
+    "prettier.trailingComma" : "none",
+    "redhat.telemetry.enabled" : false,
+    "telemetry.enableCrashReporter" : false,
+    "telemetry.enableTelemetry" : false,
+    "terminal.integrated.fontFamily" : "JetBrains Mono",
+    "terminal.integrated.rendererType" : "dom",
+    "vim.autoSwitchInputMethod.enable" : true,
+    "vim.autoSwitchInputMethod.obtainIMCmd" : "\/usr\/local\/bin\/im-select",
+    "vim.autoSwitchInputMethod.switchIMCmd" : "\/usr\/local\/bin\/im-select {im}",
+    "vim.camelCaseMotion.enable" : true,
+    "vim.easymotion" : true,
+    "vim.easymotionMarkerBackgroundColor" : "#000",
+    "vim.easymotionMarkerForegroundColorOneChar" : "red",
+    "vim.easymotionMarkerForegroundColorTwoCharSecond" : "red",
+    "vim.leader" : "<space>",
+    "window.title" : "${dirty}${rootName}${separator}${activeEditorMedium} ${appName}",
+    "workbench.activityBar.visible" : false,
+    "workbench.colorTheme" : "Dracula",
+    "workbench.editor.labelFormat" : "short",
+    "workbench.iconTheme" : "vscode-icons",
+    "zenMode.hideTabs" : false,
+    "[javascriptreact]" : {
+      "editor.defaultFormatter" : "esbenp.prettier-vscode"
+    },
+    "search.exclude" : {
+      "\/bower_components" : true,
+      "\/node_modules" : true
+    },
+    "vim.normalModeKeyBindings" : [
+      {
+        "after" : [
+          "\"",
+          "_",
+          "d"
+        ],
+        "before" : [
+          "<leader>",
+          "d"
+        ]
+      },
+      {
+        "after" : [
+          "<leader>",
+          "<leader>",
+          "<leader>",
+          "b",
+          "d",
+          "w"
+        ],
+        "before" : [
+          "Q"
+        ]
+      },
+      {
+        "after" : [
+  
+        ],
+        "before" : [
+          "<C-n>"
+        ],
+        "commands" : [
+          {
+            "command" : ":nohl"
+          }
+        ]
+      }
+    ],
+    "vim.handleKeys" : {
+      "<C-f>" : false,
+      "<C-a>" : false,
+      "<C-v>" : false,
+      "<C-c>" : false
+    },
+    "[javascript]" : {
+      "editor.defaultFormatter" : "esbenp.prettier-vscode"
+    },
+    "editor.codeActionsOnSave" : {
+      "source.fixAll.eslint" : true
+    },
+    "[json]" : {
+      "editor.defaultFormatter" : "esbenp.prettier-vscode"
+    },
+    "vim.insertModeKeyBindings" : [
+      {
+        "after" : [
+          "<esc>"
+        ],
+        "before" : [
+          "j",
+          "j"
+        ]
+      }
+    ],
+    "[jsonc]" : {
+      "editor.defaultFormatter" : "esbenp.prettier-vscode"
+    },
+    "editor.rulers" : [
+      80
+    ],
+    "workbench.colorCustomizations" : {
+      "editor.selectionBackground" : "#135564",
+      "editor.selectionHighlightBackground" : "#135564",
+      "statusBar.foreground" : "#E6CD59"
+    },
+    "[html]" : {
+      "editor.defaultFormatter" : "esbenp.prettier-vscode"
+    },
+    "gitlens.advanced.messages" : {
+      "suppressShowKeyBindingsNotice" : true
+    },
+    "eslint.codeAction.showDocumentation" : {
+      "enable" : true
+    },
+    "vim.autoSwitchInputMethod.defaultIM" : "com.apple.keylayout.US",
+    "vim.normalModeKeyBindingsNonRecursive" : [
+      {
+        "commands" : [
+          "workbench.action.toggleSidebarVisibility"
+        ],
+        "before" : [
+          "<leader>",
+          "t"
+        ]
+      },
+      {
+        "commands" : [
+          "revealInExplorer"
+        ],
+        "before" : [
+          "<leader>",
+          "f"
+        ]
+      },
+      {
+        "commands" : [
+          "fileutils.renameFile"
+        ],
+        "before" : [
+          "<leader>",
+          "r",
+          "f"
+        ]
+      }
+    ],
+    "scss.validate": false,
+    "terminal.integrated.env.osx": {
+      "FIG_NEW_SESSION": "1"
+    }
+  }
