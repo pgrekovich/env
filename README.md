@@ -20,6 +20,7 @@ Remap `caps lock` on `esc`
 - [fnm](https://github.com/Schniz/fnm)
 - [NeoVim](https://neovim.io)
 - [VsCode](https://code.visualstudio.com)
+- [Outline] (https://getoutline.org)
 ---
 - [Alfred](https://www.alfredapp.com)
     - [Search Apple Notes](https://github.com/sballin/alfred-search-notes-app)
