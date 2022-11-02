@@ -42,6 +42,7 @@ Remap `caps lock` on `esc`
 - [Slack](https://slack.com/)
 - [Rectangle](https://rectangleapp.com)
 - [AltTab](https://alt-tab-macos.netlify.app)
+- [Shottr](https://shottr.cc)
 
 ### AppStore
 - [Spark](https://apps.apple.com/pl/app/spark-email-app-by-readdle/id1176895641?mt=12)
