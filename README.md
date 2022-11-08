@@ -43,6 +43,10 @@ Remap `caps lock` on `esc`
 - [Rectangle](https://rectangleapp.com)
 - [AltTab](https://alt-tab-macos.netlify.app)
 - [Shottr](https://shottr.cc)
+- [Latest](https://github.com/mangerlahn/Latest)
+- [OpenIn](https://loshadki.app/openin/)
+- [Kap](https://getkap.co)
+- [Charge Limiter](https://github.com/davidwernhart/AlDente-Charge-Limiter)
 
 ### AppStore
 - [Spark](https://apps.apple.com/pl/app/spark-email-app-by-readdle/id1176895641?mt=12)
