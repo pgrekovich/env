@@ -1,185 +1,260 @@
 {
-    "autoimport.useSemiColon" : false,
-    "css.validate" : false,
-    "debug.internalConsoleOptions" : "openOnSessionStart",
-    "editor.accessibilitySupport" : "off",
-    "editor.bracketPairColorization.enabled" : true,
-    "editor.codeLens" : true,
-    "editor.cursorBlinking" : "phase",
-    "editor.cursorStyle" : "line",
-    "editor.detectIndentation" : true,
-    "editor.fontFamily" : "JetBrains Mono",
-    "editor.fontLigatures" : true,
-    "editor.fontSize" : 14,
-    "editor.lineNumbers" : "on",
-    "editor.minimap.enabled" : false,
-    "editor.renderControlCharacters" : false,
-    "editor.renderLineHighlight" : "all",
-    "editor.renderWhitespace" : "selection",
-    "editor.smoothScrolling" : true,
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "editor.wordSeparators" : "\/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-    "editor.wordWrap" : "off",
-    "explorer.openEditors.visible" : 0,
-    "files.eol" : "\n",
-    "gitlens.historyExplorer.enabled" : true,
-    "gitlens.mode.active" : "zen",
-    "gitlens.views.fileHistory.enabled" : true,
-    "gitlens.views.lineHistory.enabled" : true,
-    "html.autoClosingTags" : false,
-    "javascript.autoClosingTags" : false,
-    "javascript.preferences.importModuleSpecifier" : "non-relative",
-    "javascript.updateImportsOnFileMove.enabled" : "prompt",
-    "less.validate" : false,
-    "prettier.quoteProps" : "consistent",
-    "prettier.semi" : false,
-    "prettier.singleQuote" : true,
-    "prettier.trailingComma" : "none",
-    "redhat.telemetry.enabled" : false,
-    "telemetry.enableCrashReporter" : false,
-    "telemetry.enableTelemetry" : false,
-    "terminal.integrated.fontFamily" : "JetBrains Mono",
-    "terminal.integrated.rendererType" : "dom",
-    "vim.autoSwitchInputMethod.enable" : true,
-    "vim.autoSwitchInputMethod.obtainIMCmd" : "\/usr\/local\/bin\/im-select",
-    "vim.autoSwitchInputMethod.switchIMCmd" : "\/usr\/local\/bin\/im-select {im}",
-    "vim.camelCaseMotion.enable" : true,
-    "vim.easymotion" : true,
-    "vim.easymotionMarkerBackgroundColor" : "#000",
-    "vim.easymotionMarkerForegroundColorOneChar" : "red",
-    "vim.easymotionMarkerForegroundColorTwoCharSecond" : "red",
-    "vim.leader" : "<space>",
-    "window.title" : "${dirty}${rootName}${separator}${activeEditorMedium} ${appName}",
-    "workbench.activityBar.visible" : false,
-    "workbench.colorTheme" : "Dracula",
-    "workbench.editor.labelFormat" : "short",
-    "workbench.iconTheme" : "vscode-icons",
-    "zenMode.hideTabs" : false,
-    "[javascriptreact]" : {
-      "editor.defaultFormatter" : "esbenp.prettier-vscode"
+  "debug.internalConsoleOptions": "openOnSessionStart",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeLens": true,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorStyle": "line",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": true,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.renderControlCharacters": false,
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "selection",
+  "editor.smoothScrolling": true,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "explorer.openEditors.visible": 0,
+  "extensions.ignoreRecommendations": true,
+  "files.eol": "\n",
+  "git.confirmSync": false,
+  "git.mergeEditor": true,
+  "mdb.defaultLimit": 200,
+  "prettier.quoteProps": "consistent",
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "remote.SSH.defaultExtensions": [
+    "gitpod.gitpod-remote-ssh"
+  ],
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "window.restoreWindows": "none",
+  "window.title": "${dirty}${rootName}${separator}${activeEditorMedium} [${appName}]",
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Dracula",
+  "workbench.editor.labelFormat": "short",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "zenMode.hideTabs": false,
+  "search.exclude": {
+    "/bower_components": true,
+    "/node_modules": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#135564",
+    "editor.selectionHighlightBackground": "#135564",
+    "statusBar.background": "#282A36",
+    "statusBar.foreground": "#6273A4"
+  },
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "files.watcherExclude": {
+    "node_modules": true
+  },
+  "github.copilot.advanced": {
+    "length": 500
+  },
+  "settingsSync.ignoredSettings": [
+    "configurationSync.store",
+    "remote.SSH.defaultForwardedPorts"
+  ],
+  // === VIM CONFIG ===
+  "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.US",
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
+  "vim.camelCaseMotion.enable": true,
+  "vim.easymotion": true,
+  "vim.easymotionMarkerBackgroundColor": "#000",
+  "vim.easymotionMarkerForegroundColorOneChar": "red",
+  "vim.easymotionMarkerForegroundColorTwoCharSecond": "red",
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindings": [
+    {
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ],
+      "before": [
+        "<leader>",
+        "d"
+      ]
     },
-    "search.exclude" : {
-      "\/bower_components" : true,
-      "\/node_modules" : true
+    {
+      "before": [
+        ":"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ],
+      "silent": true
     },
-    "vim.normalModeKeyBindings" : [
-      {
-        "after" : [
-          "\"",
-          "_",
-          "d"
-        ],
-        "before" : [
-          "<leader>",
-          "d"
-        ]
-      },
-      {
-        "after" : [
-          "<leader>",
-          "<leader>",
-          "<leader>",
-          "b",
-          "d",
-          "w"
-        ],
-        "before" : [
-          "Q"
-        ]
-      },
-      {
-        "after" : [
-  
-        ],
-        "before" : [
-          "<C-n>"
-        ],
-        "commands" : [
-          {
-            "command" : ":nohl"
-          }
-        ]
-      }
-    ],
-    "vim.handleKeys" : {
-      "<C-f>" : false,
-      "<C-a>" : false,
-      "<C-v>" : false,
-      "<C-c>" : false
+    {
+      "before": [
+        "<leader>",
+        "m"
+      ],
+      "commands": [
+        "bookmarks.toggle"
+      ]
     },
-    "[javascript]" : {
-      "editor.defaultFormatter" : "esbenp.prettier-vscode"
+    {
+      "after": [
+        "<leader>",
+        "<leader>",
+        "<leader>",
+        "b",
+        "d",
+        "w"
+      ],
+      "before": [
+        "Q"
+      ]
     },
-    "editor.codeActionsOnSave" : {
-      "source.fixAll.eslint" : true
+    {
+      "before": [
+        "<leader>",
+        "b"
+      ],
+      "commands": [
+        {
+          "command": ":marks"
+        }
+      ]
     },
-    "[json]" : {
-      "editor.defaultFormatter" : "esbenp.prettier-vscode"
-    },
-    "vim.insertModeKeyBindings" : [
-      {
-        "after" : [
-          "<esc>"
-        ],
-        "before" : [
-          "j",
-          "j"
-        ]
-      }
-    ],
-    "[jsonc]" : {
-      "editor.defaultFormatter" : "esbenp.prettier-vscode"
-    },
-    "editor.rulers" : [
-      80
-    ],
-    "workbench.colorCustomizations" : {
-      "editor.selectionBackground" : "#135564",
-      "editor.selectionHighlightBackground" : "#135564",
-      "statusBar.foreground" : "#E6CD59"
-    },
-    "[html]" : {
-      "editor.defaultFormatter" : "esbenp.prettier-vscode"
-    },
-    "gitlens.advanced.messages" : {
-      "suppressShowKeyBindingsNotice" : true
-    },
-    "eslint.codeAction.showDocumentation" : {
-      "enable" : true
-    },
-    "vim.autoSwitchInputMethod.defaultIM" : "com.apple.keylayout.US",
-    "vim.normalModeKeyBindingsNonRecursive" : [
-      {
-        "commands" : [
-          "workbench.action.toggleSidebarVisibility"
-        ],
-        "before" : [
-          "<leader>",
-          "t"
-        ]
-      },
-      {
-        "commands" : [
-          "revealInExplorer"
-        ],
-        "before" : [
-          "<leader>",
-          "f"
-        ]
-      },
-      {
-        "commands" : [
-          "fileutils.renameFile"
-        ],
-        "before" : [
-          "<leader>",
-          "r",
-          "f"
-        ]
-      }
-    ],
-    "scss.validate": false,
-    "terminal.integrated.env.osx": {
-      "FIG_NEW_SESSION": "1"
+    {
+      "after": [],
+      "before": [
+        "<C-n>"
+      ],
+      "commands": [
+        {
+          "command": ":nohl"
+        }
+      ]
     }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "after": [
+        "<esc>"
+      ],
+      "before": [
+        "j",
+        "j"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ],
+      "before": [
+        "<leader>",
+        "e"
+      ]
+    },
+    {
+      "commands": [
+        "workbench.view.scm"
+      ],
+      "before": [
+        "<leader>",
+        "g"
+      ]
+    },
+    {
+      "commands": [
+        "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+      ],
+      "before": [
+        "<leader>",
+        "t"
+      ]
+    },
+    {
+      "commands": [
+        "revealInExplorer"
+      ],
+      "before": [
+        "<leader>",
+        "f"
+      ]
+    },
+    {
+      "commands": [
+        "fileutils.renameFile"
+      ],
+      "before": [
+        "<leader>",
+        "r",
+        "f"
+      ]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindings": [
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-f>": false,
+    "<C-a>": false,
+    "<C-v>": false,
+    "<C-c>": false
+  },
+  // === VIM CONFIG END ===
+  // === LANGUAGES SPECIFIC ===
+  "html.autoClosingTags": false,
+  "javascript.autoClosingTags": false,
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.updateImportsOnFileMove.enabled": "prompt",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
+}
