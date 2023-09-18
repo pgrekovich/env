@@ -1,6 +1,6 @@
-source "$HOME/.zsh/spaceship/spaceship.zsh"
-source "$HOME/.zsh/zsh-z/zsh-z.plugin.zsh"
-source "$HOME/.zsh/exa-zsh/exa-zsh.plugin.zsh"
+source "$HOME/.config/zsh/spaceship/spaceship.zsh"
+source "$HOME/.config/zsh/zsh-z/zsh-z.plugin.zsh"
+source "$HOME/.config/zsh/exa-zsh/exa-zsh.plugin.zsh"
 
 eval "$(fnm env --use-on-cd)"
 
