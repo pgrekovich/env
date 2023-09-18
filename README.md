@@ -9,49 +9,47 @@ Remap `caps lock` on `esc`
     - CapsLock to Hyper
 - [HomeBrew](https://brew.sh)
 - [iTerm2](https://iterm2.com)
-- [Fish shell](https://fishshell.com)
-    - [fisher](https://github.com/jorgebucaran/fisher)
-    - [Tide](https://github.com/IlanCosman/tide) - Shell theme. Use version 5: fisher install ilancosman/tide@v5
-    - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
-    - [z for fish](https://github.com/jethrokuan/z) - Directory jumping
-    - [Exa](https://github.com/gazorby/fish-exa) - ls replacement
-    - [ghq](https://github.com/decors/fish-ghq) - Local Git repository organizer
-    - [peco](https://github.com/takashabe/fish-peco) - Interactive filterin
+- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
+- [z](https://github.com/agkozak/zsh-z) - Directory jumping
+- [eza](https://github.com/eza-community/eza) - ls replacement
+- [Docker](https://www.docker.com)
 - [fnm](https://github.com/Schniz/fnm)
 - [NeoVim](https://neovim.io)
 - [VsCode](https://code.visualstudio.com)
 - [Outline](https://getoutline.org)
+
 ---
-- [Alfred](https://www.alfredapp.com)
-    - [Search Apple Notes](https://github.com/sballin/alfred-search-notes-app)
-    - [Menu Bar Search](https://github.com/BenziAhamed/Menu-Bar-Search)
-    - [SynAnt](https://github.com/vitorgalvao/alfred-workflows/tree/master/SynAnt)
-    - [Change Case](https://github.com/gillibrand/alfred-change-case)
+
+- [Raycast](https://www.raycast.com)
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Google chrome](https://www.google.com/chrome/)
 - [bartender](https://www.macbartender.com)
-- [1Password](https://1password.com/downloads/mac/)
-- [Spotify](https://www.spotify.com/us/download/other/)
+- [Bitwarden](https://bitwarden.com)
 - [Todoist](https://todoist.com/downloads)
-- [Notion](https://www.notion.so/desktop)
-- [Google drive](https://www.google.com/drive/)
+- [Spotify](https://www.spotify.com/us/download/other/)
+- [Google Drive](https://www.google.com/drive/download/)
 - [Transmission](https://transmissionbt.com)
-- [ExpressVPN](https://www.expressvpn.com)
 - [Zoom](https://zoom.us/download)
 - [Telegram](https://telegram.org)
 - [Slack](https://slack.com/)
-- [Rectangle](https://rectangleapp.com)
 - [AltTab](https://alt-tab-macos.netlify.app)
 - [Shottr](https://shottr.cc)
 - [Latest](https://github.com/mangerlahn/Latest)
-- [OpenIn](https://loshadki.app/openin/)
+- [AppCleaner](https://freemacsoft.net/appcleaner/)
+- [IINA](https://iina.io/)
+- [finicky](https://github.com/johnste/finicky)
 - [Kap](https://getkap.co)
 - [Charge Limiter](https://github.com/davidwernhart/AlDente-Charge-Limiter)
+- [Logi Options+](https://www.logitech.com/en-us/software/options.html)
+- [Glarity](https://glarity.app)
+- [CotEditor](https://coteditor.com/)
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+- [fzf](https://github.com/junegunn/fzf)
+- [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 
 ### AppStore
-- [Spark](https://apps.apple.com/pl/app/spark-email-app-by-readdle/id1176895641?mt=12)
 - [Fantastical](https://apps.apple.com/pl/app/fantastical-calendar/id975937182?mt=12)
-- [GoodNotes](https://apps.apple.com/pl/app/goodnotes-5/id1444383602)
 - [Paste](https://apps.apple.com/pl/app/paste-clipboard-manager/id967805235)
 - [Xcode](https://apps.apple.com/pl/app/xcode/id497799835?mt=12)
+- [Paste](https://apps.apple.com/us/app/paste-clipboard-manager/id967805235)
 
