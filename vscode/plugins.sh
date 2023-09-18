@@ -1,18 +1,18 @@
 EXTENSIONS=(
   dracula-theme.theme-dracula
-  EliverLara.andromeda
-  esbenp.prettier-vscode
-  styled-components.vscode-styled-components
-  PKief.material-icon-theme
-  vscodevim.vim
-  christian-kohler.npm-intellisense
-  christian-kohler.path-intellisense
   EditorConfig.EditorConfig
+  GitHub.copilot
   kshetline.ligatures-limited
-  mariusschulz.yarn-lock-syntax
-  mikestead.dotenv
   ms-azuretools.vscode-docker
-  webben.browserslist
+  ms-vscode-remote.remote-containers
+  ms-vscode-remote.remote-ssh
+  ms-vscode-remote.remote-ssh-edit
+  ms-vscode-remote.vscode-remote-extensionpack
+  ms-vscode.remote-explorer
+  ms-vscode.remote-server
+  PKief.material-icon-theme
+  TomRijndorp.find-it-faster
+  vscodevim.vim
   yzhang.markdown-all-in-one
 )
 for EXTENSION in ${EXTENSIONS[@]}; do
