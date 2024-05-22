@@ -46,6 +46,7 @@ Remap `caps lock` on `esc`
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 - [fzf](https://github.com/junegunn/fzf)
 - [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+- [Push to Kindle](https://www.pushtokindle.com)
 
 ### AppStore
 - [Fantastical](https://apps.apple.com/pl/app/fantastical-calendar/id975937182?mt=12)
