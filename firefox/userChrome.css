@@ -1,0 +1,30 @@
+html:not([privatebrowsingmode="temporary"]) #navigator-toolbox {
+    padding-top: 4px;
+    border-bottom: 0 !important;
+}
+
+html:not([privatebrowsingmode="temporary"]) #TabsToolbar {
+    visibility: collapse !important; */
+}
+  
+html:not([privatebrowsingmode="temporary"]) #sidebar-splitter {
+    border: none !important;
+    background: transparent !important;
+    width: 1px !important;
+}
+  
+#urlbar {
+    left: 50% !important;
+    transform: translateX(-50%);
+    max-width: 960px !important;
+}
+  
+html:not([privatebrowsingmode="temporary"]) #sidebar-header {
+    display: none;
+}
+  
+html:not([privatebrowsingmode="temporary"]) #navigator-toolbox {
+    padding-bottom: 0;
+}
+  
+  
