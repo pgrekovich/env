@@ -5,11 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# source "$HOME/.zsh/spaceship/spaceship.zsh"
-
 source ./.envs
 
-export BAT_THEME=Dracula
 
 alias l='eza'
 alias ld='eza -lD'
@@ -20,6 +17,7 @@ alias ls='eza -alF --color=always --sort=size | grep -v /'
 alias lt='eza -al --sort=modified'
 
 alias cat='bat --paging=never'
+export BAT_THEME=Dracula
 
 alias ..='cd ..'
 
