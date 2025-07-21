@@ -1,9 +1,13 @@
 [user]
 	name = Pavel Hrakovich
 	email = pgrekovich@gmail.com
-	signingkey = 5B8DD508770A54C3
+[includeIf "gitdir:~/Projects/demoboost/**"]
+    path = ~/Projects/demoboost/.gitconfig
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = nvim 
 [alias]
-  current-branch = "!git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'"
+	current-branch = "!git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'"
   a  = "!git add . && git s"
   ch = checkout
   c  = commit -m
@@ -15,5 +19,3 @@
   lh = "!git l && git h"
   r  = "!git rm $(git ls-files --deleted) && git status"
   lg = log --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit
-[ghq]
-	root = ~/Developer/ghq
