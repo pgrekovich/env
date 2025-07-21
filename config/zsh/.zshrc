@@ -20,7 +20,7 @@ alias vim="nvim"
 alias view="nvim -R"
 alias vimdiff="nvim -d"
 
-alias dfstow='stow --dir="$HOME/.dotfiles/root" --target="$HOME" *'
+alias dfstow='stow --dir="$HOME/.dotfiles/config" --target="$HOME" *'
 
 alias docker="export TMPDIR=/tmp && docker"
 alias yt1080="yt-dlp -f 'bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
