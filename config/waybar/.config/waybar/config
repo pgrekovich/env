@@ -23,6 +23,7 @@
         // "memory",
         // "temperature",
         // "backlight",
+        "custom/tailscale",
         "keyboard-state",
         "battery",
         "battery#bat2",
@@ -98,6 +99,19 @@
             "activated": "",
             "deactivated": ""
         }
+    },
+    "custom/tailscale" : {
+        "exec": "~/.config/waybar/bin/waybar-tailscale/waybar-tailscale.sh --status",
+        "on-click": "exec ~/.config/waybar/bin/waybar-tailscale/waybar-tailscale.sh --toggle",
+        "exec-on-event": true, 
+        "format": "VPN: {icon}",
+        "format-icons": {
+            "connected": "on",
+            "stopped": "off"
+        },
+        "tooltip": true,
+        "return-type": "json",
+        "interval": 3
     },
     "bluetooth": {
       "format": " {status}",
