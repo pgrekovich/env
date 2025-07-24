@@ -336,8 +336,7 @@
                                     "key_code": "3",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_option",
-                                            "left_shift"
+                                            "left_option"
                                         ]
                                     }
                                 },
@@ -353,7 +352,8 @@
                                     "key_code": "3",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_option"
+                                            "left_option",
+                                            "left_shift"
                                         ]
                                     }
                                 },
