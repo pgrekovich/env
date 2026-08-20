@@ -1,0 +1,15 @@
+theme = tokyonight
+
+font-size = 16
+
+font-family = JetBrainsMonoNL Nerd Font
+
+window-decoration = none
+
+clipboard-read = allow
+
+clipboard-write = allow
+
+desktop-notifications = true
+
+link-url = true
