@@ -63,6 +63,16 @@
       "alt-tab"
       "localsend"
       "qlmarkdown"
+      "google-drive"
+      "transmission"
+      "zoom"
+      "iina"
+      "kap"
+      "appcleaner"
+      "latest"
+      "betterdisplay"
+      # menu bar manager: open source, replaces bartender
+      "jordanbaird-ice"
     ];
     # requires being signed into the App Store before the switch
     masApps = {

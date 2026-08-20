@@ -37,18 +37,9 @@ After bootstrap:
 - `home/home.nix` - CLI packages, zsh + starship, git, config symlinks
 - `config/` - live configs, symlinked into `$HOME` via mkOutOfStoreSymlink
 
-## Installed manually (not in nix yet)
+## Installed manually (not in nix)
 
-- [Google Drive](https://www.google.com/drive/download/)
-- [Transmission](https://transmissionbt.com)
-- [Zoom](https://zoom.us/download)
-- [Latest](https://github.com/mangerlahn/Latest)
-- [AppCleaner](https://freemacsoft.net/appcleaner/)
-- [IINA](https://iina.io/)
-- [Kap](https://getkap.co)
-- [Keychron Engine](https://www.keychron.com/pages/how-to-install-the-keychron-engine-software-on-macos)
-- [BetterDisplay Pro](https://github.com/waydabber/BetterDisplay)
-- [bartender](https://www.macbartender.com)
+- [Keychron Launcher](https://launcher.keychron.com) - browser-based, no app to install
 
 ## Notes
 
