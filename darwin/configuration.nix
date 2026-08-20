@@ -35,6 +35,12 @@
     # this list fully reflects the machine.
     onActivation.cleanup = "none";
     onActivation.autoUpdate = true;
+    # ai clis move too fast for nixpkgs stable, brew keeps them fresh
+    brews = [
+      "codex"
+      "opencode"
+      "gemini-cli"
+    ];
     casks = [
       # password managers first - nothing else is reachable without them
       "1password"
@@ -50,11 +56,16 @@
       "slack"
       "shottr"
       "finicky"
+      "todoist-app"
+      "the-unarchiver"
+      "tailscale-app"
+      "claude-code"
     ];
     # requires being signed into the App Store before the switch
     masApps = {
       "Fantastical" = 975937182;
       "Xcode" = 497799835;
+      "Amphetamine" = 937984704;
     };
   };
 }
