@@ -63,6 +63,15 @@ in
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+    # fzf-tab loads at order 900: after compinit, before syntax highlighting
+    plugins = [
+      {
+        name = "fzf-tab";
+        src = pkgs.zsh-fzf-tab;
+        file = "share/fzf-tab/fzf-tab.plugin.zsh";
+      }
+    ];
+
     history = {
       size = 5000;
       share = true;
@@ -101,6 +110,10 @@ in
 
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
       zstyle ':completion:*' list-colors "''${(s.:.)LS_COLORS}"
+      zstyle ':completion:*' menu no
+
+      zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+      zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --color=always $realpath'
     '';
   };
 
