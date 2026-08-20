@@ -36,6 +36,9 @@
     onActivation.cleanup = "none";
     onActivation.autoUpdate = true;
     casks = [
+      # password managers first - nothing else is reachable without them
+      "1password"
+      "bitwarden"
       "ghostty"
       "karabiner-elements"
       "raycast"

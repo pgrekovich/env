@@ -36,7 +36,6 @@ After bootstrap:
 
 ## Installed manually (not in nix yet)
 
-- [Bitwarden](https://bitwarden.com)
 - [Spotify](https://www.spotify.com/us/download/other/)
 - [Google Drive](https://www.google.com/drive/download/)
 - [Transmission](https://transmissionbt.com)
