@@ -157,8 +157,6 @@ in
 
   programs.git = {
     enable = true;
-    userName = "Pavel Hrakovich";
-    userEmail = "pgrekovich@users.noreply.github.com";
 
     includes = [
       {
@@ -167,22 +165,27 @@ in
       }
     ];
 
-    aliases = {
-      current-branch = "!git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'";
-      a = "!git add . && git s";
-      ch = "checkout";
-      c = "commit -m";
-      ac = "commit -am";
-      s = "status --short --branch";
-      d = "diff";
-      l = "!git pull origin $(git current-branch) --rebase";
-      h = "!git push origin $(git current-branch)";
-      lh = "!git l && git h";
-      r = "!git rm $(git ls-files --deleted) && git status";
-      lg = "log --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit";
-    };
+    settings = {
+      user = {
+        name = "Pavel Hrakovich";
+        email = "pgrekovich@users.noreply.github.com";
+      };
 
-    extraConfig = {
+      alias = {
+        current-branch = "!git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'";
+        a = "!git add . && git s";
+        ch = "checkout";
+        c = "commit -m";
+        ac = "commit -am";
+        s = "status --short --branch";
+        d = "diff";
+        l = "!git pull origin $(git current-branch) --rebase";
+        h = "!git push origin $(git current-branch)";
+        lh = "!git l && git h";
+        r = "!git rm $(git ls-files --deleted) && git status";
+        lg = "log --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit";
+      };
+
       core = {
         editor = "nvim";
         excludesfile = "~/.gitignore_global";
