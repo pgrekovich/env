@@ -208,4 +208,10 @@ in
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/ghostty/.config/ghostty";
   home.file.".gitignore_global".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/git/.gitignore_global";
+
+  # Public agent instructions. Personal ones are added by hand on top.
+  home.file."AGENTS.md".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/agents/AGENTS.md";
+  home.file.".claude/CLAUDE.md".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/agents/AGENTS.md";
 }
