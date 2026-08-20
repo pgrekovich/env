@@ -37,12 +37,27 @@ After bootstrap:
 - `home/home.nix` - CLI packages, zsh + starship, git, config symlinks
 - `config/` - live configs, symlinked into `$HOME` via mkOutOfStoreSymlink
 
+## Manual steps macOS won't let nix do
+
+- Log out and back in once after the first switch - keyboard input sources
+  (Russian, Polish Pro) only register at login
+- System Settings > Keyboard: backlight timeout ("Never") and "Adjust
+  keyboard brightness in low light" (off). The old
+  `com.apple.BezelServices` keys for these are dead on Apple Silicon.
+- Grant Accessibility to Karabiner, Shottr and AltTab
+
 ## Notes
 
 - Karabiner rules: Left CMD -> EN, Right CMD -> RU, CapsLock -> Hyper
-- Log out and back in once after the first switch - keyboard input sources
-  (Russian, Polish Pro) are only picked up at login
-- Not automatable, set by hand in System Settings > Keyboard:
-  keyboard backlight timeout ("Never") and "Adjust keyboard brightness in
-  low light" (off). Also grant Accessibility to Karabiner, Shottr and AltTab.
+- Neovim is a plain package, not `programs.neovim`: that module writes its
+  own `~/.config/nvim/init.lua` and collides with the symlinked LazyVim
+  config. It comes from `nixpkgs-unstable` so it tracks upstream releases
+  instead of freezing with the stable channel.
+- AI CLIs (codex, opencode, gemini-cli) come from brew - they release far
+  too often for a stable nix channel
+- node and pnpm are mise tools, not nix packages, so projects can pin their
+  own versions. Global versions live in `home/home.nix`, so `mise use -g`
+  won't work - edit and rebuild instead.
+- `homebrew.onActivation.cleanup` is `none`. Switching it to `zap` would
+  uninstall every cask not listed in `darwin/configuration.nix`.
 - `archive/` holds configs no longer in use, kept for reference (vscode)
