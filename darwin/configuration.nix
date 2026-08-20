@@ -60,6 +60,9 @@
       "the-unarchiver"
       "tailscale-app"
       "claude-code"
+      "contexts"
+      "localsend"
+      "qlmarkdown"
     ];
     # requires being signed into the App Store before the switch
     masApps = {

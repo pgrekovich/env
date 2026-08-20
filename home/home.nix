@@ -20,6 +20,12 @@ in
     htop
     wget
     yt-dlp
+    ffmpeg
+
+    # languages / clouds
+    python3
+    rustup
+    awscli2
 
     # git tooling
     gh
