@@ -19,3 +19,13 @@
   lh = "!git l && git h"
   r  = "!git rm $(git ls-files --deleted) && git status"
   lg = log --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit
+[pull]
+	rebase = true
+[merge]
+	conflictStyle = diff3
+[merge "mergiraf"]
+  name = mergiraf
+  driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
+
+[coderabbit]
+	machineId = cli/26f10de810ff40608e536b7eae472bae
