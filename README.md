@@ -7,13 +7,15 @@ macOS environment managed by [nix-darwin](https://github.com/nix-darwin/nix-darw
 ## Fresh machine
 
 ```sh
-git clone <this repo> ~/Projects/lab/env
-cd ~/Projects/lab/env
+git clone https://github.com/pgrekovich/env.git ~/.dotfiles
+cd ~/.dotfiles
 ./bootstrap.sh
 ```
 
-This installs Determinate Nix, symlinks the repo to `~/.dotfiles`, runs the first
-`darwin-rebuild switch` and installs tpm for tmux.
+This installs Determinate Nix, runs the first `darwin-rebuild switch`, installs
+tpm for tmux and the global mise tools. Cloning somewhere other than
+`~/.dotfiles` also works - the scripts symlink that path for you, since
+`home/home.nix` resolves its config symlinks through it.
 
 Before bootstrap: sign into the App Store (Fantastical and Xcode install
 via `mas` and need it).

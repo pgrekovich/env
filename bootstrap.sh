@@ -14,9 +14,14 @@ else
   . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 fi
 
-echo "==> Step 2: symlink this repo to ~/.dotfiles"
-# home.nix resolves mkOutOfStoreSymlink paths through ~/.dotfiles.
-ln -sfn "$DIR" ~/.dotfiles
+echo "==> Step 2: make sure the repo is reachable at ~/.dotfiles"
+# home.nix resolves mkOutOfStoreSymlink paths through ~/.dotfiles. Skip the
+# symlink when the repo already lives there, or ln would nest one inside it.
+if [ "$DIR" = "$HOME/.dotfiles" ]; then
+  echo "    already at ~/.dotfiles, nothing to link"
+else
+  ln -sfn "$DIR" ~/.dotfiles
+fi
 
 echo "==> Step 3: first darwin-rebuild switch"
 # darwin-rebuild doesn't exist yet on a fresh machine, run it from the flake.
