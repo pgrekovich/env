@@ -17,7 +17,7 @@
 
   outputs = inputs@{ self, nix-darwin, nix-homebrew, home-manager, nixpkgs, nixpkgs-unstable }:
     let
-      user = "pgrekovich";
+      user = "ph";
       pkgs-unstable = import nixpkgs-unstable {
         system = "aarch64-darwin";
         config.allowUnfree = true;

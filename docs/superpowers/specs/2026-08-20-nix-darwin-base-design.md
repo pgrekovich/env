@@ -25,7 +25,7 @@ Modeled after kunchenguid/dotfiles.
 ## Architecture
 
 - `flake.nix` - nixpkgs 26.05-darwin, nix-darwin 26.05, home-manager
-  release-26.05, nix-homebrew; single host `mac`, user `pgrekovich`
+  release-26.05, nix-homebrew; single host `mac`, user `ph`
 - `darwin/configuration.nix` - macOS defaults (fast key repeat, dock autohide,
   finder tweaks), homebrew casks; `nix.enable = false` because Determinate
   manages the daemon; homebrew cleanup stays `none` until the cask list fully
