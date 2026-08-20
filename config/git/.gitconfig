@@ -1,6 +1,6 @@
 [user]
-	name = Pavel Hrakovich
-	email = pgrekovich@gmail.com
+	name = pgrekovich
+	email = pgrekovich@users.noreply.github.com
 [includeIf "gitdir:~/Projects/demoboost/**"]
     path = ~/Projects/demoboost/.gitconfig
 [core]

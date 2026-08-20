@@ -145,7 +145,7 @@ in
   programs.git = {
     enable = true;
     userName = "Pavel Hrakovich";
-    userEmail = "pgrekovich@gmail.com";
+    userEmail = "pgrekovich@users.noreply.github.com";
 
     includes = [
       {

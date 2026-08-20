@@ -53,4 +53,4 @@ After bootstrap:
 ## Notes
 
 - Karabiner rules: Left CMD -> EN, Right CMD -> RU, CapsLock -> Hyper
-- `tools/vscode/` is kept for reference (not in active use)
+- `archive/` holds configs no longer in use, kept for reference (vscode)
