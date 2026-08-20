@@ -60,7 +60,7 @@
       "the-unarchiver"
       "tailscale-app"
       "claude-code"
-      "contexts"
+      "alt-tab"
       "localsend"
       "qlmarkdown"
     ];
