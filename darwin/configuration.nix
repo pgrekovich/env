@@ -13,15 +13,28 @@
   };
   system.stateVersion = 6;
 
+  system.startup.chime = false;
+
   system.defaults = {
     NSGlobalDomain = {
       KeyRepeat = 2;
       InitialKeyRepeat = 15;
       AppleShowAllExtensions = true;
+      "com.apple.sound.beep.feedback" = 0;  # no sound on volume change
     };
-    dock.autohide = true;
+    dock = {
+      autohide = true;
+      show-recents = false;
+      show-process-indicators = true;
+      mru-spaces = false;      # keep Spaces in a fixed order
+      expose-group-apps = false;  # Mission Control: don't group by application
+    };
     finder.FXPreferredViewStyle = "Nlsv";
     finder.CreateDesktop = false;
+    WindowManager.GloballyEnabled = false;  # Stage Manager off
+
+    # no typed option for this one
+    CustomUserPreferences.NSGlobalDomain."com.apple.sound.uiaudio.enabled" = 0;
   };
 
   nix-homebrew = {
