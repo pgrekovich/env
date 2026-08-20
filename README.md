@@ -62,4 +62,4 @@ After bootstrap:
 
 - Karabiner rules: Left CMD -> EN, Right CMD -> RU, CapsLock -> Hyper
 - `tools/vscode/` is kept for reference (not in active use)
-- `config/zsh/.zshrc` and `config/kitty/` are the pre-nix configs, kept for reference
+- `config/zsh/.zshrc` is the pre-nix zsh config, kept for reference
