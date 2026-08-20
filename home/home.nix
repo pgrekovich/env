@@ -10,6 +10,11 @@ in
   home.stateVersion = "26.05";
 
   home.packages = with pkgs; [
+    # Plain binary, not programs.neovim: that module writes its own
+    # ~/.config/nvim/init.lua, which collides with the symlinked LazyVim config.
+    # Unstable tracks upstream releases; stable pins at branch-release time.
+    pkgs-unstable.neovim-unwrapped
+
     # daily cli
     eza
     bat
@@ -43,19 +48,9 @@ in
 
   fonts.fontconfig.enable = true;
 
-  # EDITOR is set by programs.neovim.defaultEditor
   home.sessionVariables = {
+    EDITOR = "nvim";
     BAT_THEME = "Dracula";
-  };
-
-  programs.neovim = {
-    enable = true;
-    # stable nixpkgs pins neovim at branch-release time; unstable tracks
-    # upstream releases within days
-    package = pkgs-unstable.neovim-unwrapped;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
   };
 
   programs.zsh = {
@@ -93,6 +88,8 @@ in
       cat = "bat --paging=never";
       ".." = "cd ..";
 
+      vi = "nvim";
+      vim = "nvim";
       view = "nvim -R";
       vimdiff = "nvim -d";
 
