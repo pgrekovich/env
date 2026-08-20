@@ -15,6 +15,9 @@ cd ~/Projects/lab/env
 This installs Determinate Nix, symlinks the repo to `~/.dotfiles`, runs the first
 `darwin-rebuild switch` and installs tpm for tmux.
 
+Before bootstrap: sign into the App Store (Fantastical and Xcode install
+via `mas` and need it).
+
 After bootstrap:
 
 - copy `config/zsh/.envs.example` to `~/.envs` and fill in the tokens
@@ -36,26 +39,16 @@ After bootstrap:
 
 ## Installed manually (not in nix yet)
 
-- [Spotify](https://www.spotify.com/us/download/other/)
 - [Google Drive](https://www.google.com/drive/download/)
 - [Transmission](https://transmissionbt.com)
 - [Zoom](https://zoom.us/download)
-- [Telegram](https://telegram.org)
-- [Slack](https://slack.com/)
-- [Shottr](https://shottr.cc)
 - [Latest](https://github.com/mangerlahn/Latest)
 - [AppCleaner](https://freemacsoft.net/appcleaner/)
 - [IINA](https://iina.io/)
-- [finicky](https://github.com/johnste/finicky)
 - [Kap](https://getkap.co)
 - [Keychron Engine](https://www.keychron.com/pages/how-to-install-the-keychron-engine-software-on-macos)
 - [BetterDisplay Pro](https://github.com/waydabber/BetterDisplay)
 - [bartender](https://www.macbartender.com)
-
-### AppStore
-
-- [Fantastical](https://apps.apple.com/pl/app/fantastical-calendar/id975937182?mt=12)
-- [Xcode](https://apps.apple.com/pl/app/xcode/id497799835?mt=12)
 
 ## Notes
 

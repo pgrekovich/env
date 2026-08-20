@@ -45,6 +45,16 @@
       "google-chrome"
       "brave-browser"
       "docker-desktop"
+      "spotify"
+      "telegram"
+      "slack"
+      "shottr"
+      "finicky"
     ];
+    # requires being signed into the App Store before the switch
+    masApps = {
+      "Fantastical" = 975937182;
+      "Xcode" = 497799835;
+    };
   };
 }
