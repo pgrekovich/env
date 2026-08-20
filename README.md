@@ -40,4 +40,9 @@ After bootstrap:
 ## Notes
 
 - Karabiner rules: Left CMD -> EN, Right CMD -> RU, CapsLock -> Hyper
+- Log out and back in once after the first switch - keyboard input sources
+  (Russian, Polish Pro) are only picked up at login
+- Not automatable, set by hand in System Settings > Keyboard:
+  keyboard backlight timeout ("Never") and "Adjust keyboard brightness in
+  low light" (off). Also grant Accessibility to Karabiner, Shottr and AltTab.
 - `archive/` holds configs no longer in use, kept for reference (vscode)

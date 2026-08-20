@@ -21,6 +21,7 @@
       InitialKeyRepeat = 15;
       AppleShowAllExtensions = true;
       "com.apple.sound.beep.feedback" = 0;  # no sound on volume change
+      "com.apple.swipescrolldirection" = true;  # natural scrolling
     };
     dock = {
       autohide = true;
@@ -33,8 +34,41 @@
     finder.CreateDesktop = false;
     WindowManager.GloballyEnabled = false;  # Stage Manager off
 
-    # no typed option for this one
-    CustomUserPreferences.NSGlobalDomain."com.apple.sound.uiaudio.enabled" = 0;
+    # settings without typed options
+    CustomUserPreferences = {
+      NSGlobalDomain."com.apple.sound.uiaudio.enabled" = 0;
+
+      # Keyboard layouts and the fn key. Applied at login, so the input
+      # sources only show up after logging out and back in.
+      "com.apple.HIToolbox" = {
+        AppleFnUsageType = 1;  # fn switches input source
+        AppleEnabledInputSources = [
+          {
+            InputSourceKind = "Keyboard Layout";
+            "KeyboardLayout ID" = 0;
+            "KeyboardLayout Name" = "U.S.";
+          }
+          {
+            InputSourceKind = "Keyboard Layout";
+            "KeyboardLayout ID" = 19456;
+            "KeyboardLayout Name" = "Russian";
+          }
+          {
+            InputSourceKind = "Keyboard Layout";
+            "KeyboardLayout ID" = 30788;
+            "KeyboardLayout Name" = "Polish Pro";
+          }
+          {
+            "Bundle ID" = "com.apple.CharacterPaletteIM";
+            InputSourceKind = "Non Keyboard Input Method";
+          }
+          {
+            "Bundle ID" = "com.apple.PressAndHold";
+            InputSourceKind = "Non Keyboard Input Method";
+          }
+        ];
+      };
+    };
   };
 
   nix-homebrew = {
