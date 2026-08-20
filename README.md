@@ -37,10 +37,6 @@ After bootstrap:
 - `home/home.nix` - CLI packages, zsh + starship, git, config symlinks
 - `config/` - live configs, symlinked into `$HOME` via mkOutOfStoreSymlink
 
-## Installed manually (not in nix)
-
-- [Keychron Launcher](https://launcher.keychron.com) - browser-based, no app to install
-
 ## Notes
 
 - Karabiner rules: Left CMD -> EN, Right CMD -> RU, CapsLock -> Hyper
