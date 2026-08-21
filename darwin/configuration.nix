@@ -122,7 +122,6 @@
     onActivation.autoUpdate = true;
     # ai clis move too fast for nixpkgs stable, brew keeps them fresh
     brews = [
-      "codex"
       "opencode"
       "gemini-cli"
     ];
@@ -164,12 +163,11 @@
       "betterdisplay"
       # menu bar manager: open source, replaces bartender
       "jordanbaird-ice"
+      # ai cli that ships as a cask rather than a formula
+      "codex"
     ];
-    # requires being signed into the App Store before the switch
-    masApps = {
-      "Fantastical" = 975937182;
-      "Xcode" = 497799835;
-      "Amphetamine" = 937984704;
-    };
+    # No masApps on purpose. mas needs an App Store login before the switch
+    # and fails the whole activation when it can't reach one, so App Store
+    # apps (Xcode, Fantastical, Amphetamine) are installed by hand.
   };
 }
