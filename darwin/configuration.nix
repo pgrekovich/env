@@ -105,6 +105,8 @@
       "finicky"
       "todoist-app"
       "fastmail"
+      "obsidian"
+      "discord"
       "the-unarchiver"
       "tailscale-app"
       "claude-code"
