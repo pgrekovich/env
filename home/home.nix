@@ -212,6 +212,11 @@ in
   home.file.".finicky.js".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/finicky/.finicky.js";
 
+  # macOS `login` greets every new shell with "Last login: ...". An empty
+  # ~/.hushlogin is the documented way to silence it. Contents are irrelevant,
+  # only the file has to exist.
+  home.file.".hushlogin".text = "";
+
   # Public agent instructions. Personal ones are added by hand on top.
   home.file."AGENTS.md".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/agents/AGENTS.md";
