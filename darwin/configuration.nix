@@ -1,4 +1,43 @@
-{ user, ... }:
+{ user, lib, ... }:
+
+let
+  # macOS system shortcuts live in com.apple.symbolichotkeys under numeric ids
+  # (undocumented by Apple, but stable). Each one listed here gets switched
+  # off; the comment is what the id means in System Settings > Keyboard.
+  disabledHotkeys = {
+    "64" = "Show Spotlight search (cmd+space) - belongs to Raycast";
+
+    # Layout switching is already handled twice over, by the Karabiner
+    # Left CMD -> en / Right CMD -> ru rules and by AppleFnUsageType below.
+    # ctrl+space on top of that only collides with IDE completion and tmux.
+    "60" = "Select the previous input source (ctrl+space)";
+    "61" = "Select the next input source (ctrl+opt+space)";
+
+    # ctrl+arrows move between Spaces, which fights Hyper Navigation and
+    # pane movement in tmux/nvim.
+    "79" = "Move left a space (ctrl+left)";
+    "80" = "Move right a space (ctrl+right)";
+    "81" = "Move up a space (ctrl+up)";
+    "82" = "Move down a space (ctrl+down)";
+
+    # fn is claimed by AppleFnUsageType = 1 for input sources, so the
+    # Emoji & Symbols binding on the same key has to go.
+    "164" = "Show Emoji & Symbols (globe/fn)";
+  };
+
+  # One `-dict-add` per id, deliberately not a single `defaults write` of the
+  # whole AppleSymbolicHotKeys dict: that replaces the value outright, so every
+  # id macOS already stores there and this file doesn't mention would be lost.
+  # Activation runs as root (postUserActivation is gone in 26.05), so drop into
+  # the user's context the way nix-darwin writes its own user defaults.
+  # Applied at login, like the other keyboard settings here.
+  disableHotkey = id: what: ''
+    # ${what}
+    launchctl asuser "$(id -u -- ${user})" sudo --user=${user} -- \
+      defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys \
+        -dict-add ${id} '<dict><key>enabled</key><false/></dict>'
+  '';
+in
 
 {
   # Determinate Nix manages the daemon itself, nix-darwin must not touch it.
@@ -76,6 +115,11 @@
       NSGlobalDomain.AppleLocale = "en_US@rg=plzzzz";
       NSGlobalDomain.AppleLanguages = [ "en-US" "ru-PL" "pl-PL" ];
 
+      # The badge that pops up next to the cursor on every layout switch.
+      # With fn and both CMD keys all switching layouts, it is constant noise.
+      # kCFPreferencesAnyApplication is the same domain as NSGlobalDomain.
+      NSGlobalDomain.TSMLanguageIndicatorEnabled = 0;
+
       # Keyboard layouts and the fn key. Applied at login, so the input
       # sources only show up after logging out and back in.
       "com.apple.HIToolbox" = {
@@ -108,6 +152,9 @@
       };
     };
   };
+
+  system.activationScripts.postActivation.text =
+    lib.concatStrings (lib.mapAttrsToList disableHotkey disabledHotkeys);
 
   nix-homebrew = {
     enable = true;
