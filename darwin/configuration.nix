@@ -22,6 +22,21 @@
       AppleShowAllExtensions = true;
       "com.apple.sound.beep.feedback" = 0;  # no sound on volume change
       "com.apple.swipescrolldirection" = true;  # natural scrolling
+
+      # Hold a key to repeat it instead of showing the accent popup
+      ApplePressAndHoldEnabled = false;
+
+      # macOS rewriting what you type is never wanted while coding
+      NSAutomaticCapitalizationEnabled = false;
+      NSAutomaticDashSubstitutionEnabled = false;
+      NSAutomaticPeriodSubstitutionEnabled = false;
+      NSAutomaticQuoteSubstitutionEnabled = false;
+      NSAutomaticSpellingCorrectionEnabled = false;
+      NSAutomaticInlinePredictionEnabled = false;
+
+      AppleInterfaceStyleSwitchesAutomatically = true;  # follow day/night
+      AppleSpacesSwitchOnActivate = true;
+      AppleEnableSwipeNavigateWithScrolls = true;
     };
     dock = {
       autohide = true;
@@ -29,9 +44,23 @@
       show-process-indicators = true;
       mru-spaces = false;      # keep Spaces in a fixed order
       expose-group-apps = false;  # Mission Control: don't group by application
+      tilesize = 71;
+      magnification = false;
+      minimize-to-application = false;
     };
-    finder.FXPreferredViewStyle = "Nlsv";
-    finder.CreateDesktop = false;
+    finder = {
+      FXPreferredViewStyle = "Nlsv";
+      CreateDesktop = false;
+      AppleShowAllFiles = true;        # hidden files visible
+      ShowPathbar = true;
+      ShowStatusBar = false;
+      FXDefaultSearchScope = "SCcf";   # search the current folder, not the whole Mac
+      ShowHardDrivesOnDesktop = false;
+      ShowExternalHardDrivesOnDesktop = true;
+    };
+
+    # native screenshots go to the clipboard (Shottr handles the rest)
+    screencapture.target = "clipboard";
     WindowManager.GloballyEnabled = false;  # Stage Manager off
 
     # settings without typed options
@@ -42,6 +71,10 @@
       # toggle in Mouse > Advanced: -1 turns acceleration off entirely.
       # Trackpad speed is left at the macOS default (never changed).
       NSGlobalDomain."com.apple.mouse.scaling" = 0.875;
+
+      # US English with Polish region formats; input languages in priority order
+      NSGlobalDomain.AppleLocale = "en_US@rg=plzzzz";
+      NSGlobalDomain.AppleLanguages = [ "en-US" "ru-PL" "pl-PL" ];
 
       # Keyboard layouts and the fn key. Applied at login, so the input
       # sources only show up after logging out and back in.
