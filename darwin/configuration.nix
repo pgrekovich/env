@@ -88,6 +88,8 @@ in
       minimize-to-application = false;
     };
     finder = {
+      # new windows open in ~ instead of Recents
+      NewWindowTarget = "Home";
       FXPreferredViewStyle = "Nlsv";
       CreateDesktop = false;
       AppleShowAllFiles = true;        # hidden files visible
