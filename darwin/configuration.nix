@@ -104,6 +104,7 @@
       "shottr"
       "finicky"
       "todoist-app"
+      "fastmail"
       "the-unarchiver"
       "tailscale-app"
       "claude-code"
