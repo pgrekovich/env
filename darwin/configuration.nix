@@ -177,6 +177,8 @@ in
     brews = [
       "opencode"
       "gemini-cli"
+      # terminal multiplexer for agent sessions
+      "herdr"
     ];
     casks = [
       # password managers first - nothing else is reachable without them
