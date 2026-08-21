@@ -38,6 +38,11 @@
     CustomUserPreferences = {
       NSGlobalDomain."com.apple.sound.uiaudio.enabled" = 0;
 
+      # Mouse tracking speed. Same key doubles as the "Pointer acceleration"
+      # toggle in Mouse > Advanced: -1 turns acceleration off entirely.
+      # Trackpad speed is left at the macOS default (never changed).
+      NSGlobalDomain."com.apple.mouse.scaling" = 0.875;
+
       # Keyboard layouts and the fn key. Applied at login, so the input
       # sources only show up after logging out and back in.
       "com.apple.HIToolbox" = {
