@@ -209,6 +209,9 @@ in
   home.file.".gitignore_global".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/git/.gitignore_global";
 
+  home.file.".finicky.js".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/finicky/.finicky.js";
+
   # Public agent instructions. Personal ones are added by hand on top.
   home.file."AGENTS.md".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/agents/AGENTS.md";
