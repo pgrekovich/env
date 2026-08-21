@@ -60,6 +60,10 @@ in
       InitialKeyRepeat = 15;
       AppleShowAllExtensions = true;
       "com.apple.sound.beep.feedback" = 0;  # no sound on volume change
+
+      # Alert volume at 10%. macOS stores this as e^(pct-1) rather than the
+      # percentage itself: 100% = 1.0, 50% = 0.6065307, 10% = 0.4065697.
+      "com.apple.sound.beep.volume" = 0.4065697;
       "com.apple.swipescrolldirection" = true;  # natural scrolling
 
       # Hold a key to repeat it instead of showing the accent popup
