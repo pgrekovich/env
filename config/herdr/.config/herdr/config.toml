@@ -1,0 +1,58 @@
+# herdr - terminal workspace manager for AI agents.
+# Full reference: `herdr --default-config`.
+# Reload a running server with `herdr server reload-config`.
+
+# Notifications are configured below, so skip the first-run setup prompt.
+onboarding = false
+
+[theme]
+# Matches Ghostty's tokyonight, and follows the same day/night switch as
+# NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically.
+name = "tokyo-night"
+auto_switch = false
+dark_name = "tokyo-night"
+light_name = "tokyo-night-day"
+
+[keys]
+# Same prefix as tmux (M-Space), so the muscle memory carries over.
+# Ghostty sends option as alt on U.S. layouts, which is what makes this work;
+# under Russian or Polish Pro option composes characters instead, so fall back
+# to the mouse or reach for prefix-free actions there.
+prefix = "alt+space"
+
+# Sidebar toggle, both ways: the prefix version stays for consistency with the
+# rest of the bindings, ctrl+alt+b is a direct chord so it works mid-edit in
+# nvim without the two-step prefix dance. Neither nvim nor Ghostty claims it.
+toggle_sidebar = ["prefix+b", "ctrl+alt+b"]
+
+# sessionx-style jumper: herdr-navigator fuzzes over open workspaces, agents,
+# zoxide directories and sessions in one list; enter focuses or creates.
+# Plugin: `herdr plugin install thanhdat77/herdr-navigator` (needs a rustup
+# toolchain to build). The prefix binding matches the rest, the direct chord
+# skips the prefix mid-edit.
+[[keys.command]]
+key = ["prefix+f", "ctrl+alt+f"]
+type = "plugin_action"
+command = "herdr-navigator.open"
+description = "jump to anything"
+
+# Bounce between the two most recent workspaces, tmux last-session style.
+# ("a" for alternate; prefix+tab is taken by cycle_pane_next.)
+[[keys.command]]
+key = "prefix+a"
+type = "plugin_action"
+command = "herdr-navigator.jump-back"
+description = "last workspace"
+
+[ui]
+# Collapsed means gone, not a narrow status rail: the default "compact" still
+# eats columns, which is the whole complaint when nvim is in the pane.
+sidebar_collapsed_mode = "hidden"
+
+[ui.toast]
+# The point of a multiplexer for agents: get told when one in a background
+# workspace finished or is blocked on a question. Delivered through Ghostty
+# (desktop-notifications = true there), which already holds the macOS
+# notification permission, rather than herdr talking to the OS itself.
+delivery = "terminal"
+delay_seconds = 1

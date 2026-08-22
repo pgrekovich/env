@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-unstable, user, ... }:
+{ config, lib, pkgs, pkgs-unstable, user, ... }:
 
 let
   dotfiles = "${config.home.homeDirectory}/.dotfiles";
@@ -92,6 +92,9 @@ in
       vim = "nvim";
       view = "nvim -R";
       vimdiff = "nvim -d";
+
+      # regenerate ~/AGENTS.md after editing either agents file (see below)
+      agents-sync = "cat ~/.dotfiles/config/agents/AGENTS.md ~/.dotfiles/config/agents/AGENTS.local.md > ~/AGENTS.md";
 
       docker = "export TMPDIR=/tmp && docker";
       yt1080 = "yt-dlp -f 'bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'";
@@ -208,6 +211,14 @@ in
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/ghostty/.config/ghostty";
   home.file.".gitignore_global".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/git/.gitignore_global";
+  # Only the one file: herdr keeps its sockets, logs and session state in the
+  # same directory, so the directory itself can't be a symlink into the repo.
+  home.file.".config/herdr/config.toml".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/herdr/.config/herdr/config.toml";
+  # Same story one level down: the navigator plugin keeps jump-back state next
+  # to its config, so only config.toml is linked.
+  home.file.".config/herdr/plugins/config/herdr-navigator/config.toml".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/herdr/.config/herdr/plugins/config/herdr-navigator/config.toml";
 
   home.file.".finicky.js".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/finicky/.finicky.js";
@@ -217,9 +228,19 @@ in
   # only the file has to exist.
   home.file.".hushlogin".text = "";
 
-  # Public agent instructions. Personal ones are added by hand on top.
-  home.file."AGENTS.md".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/agents/AGENTS.md";
+  # Agent instructions, two layers: the tracked AGENTS.md is the public base,
+  # config/agents/AGENTS.local.md (gitignored, same pattern as zsh .envs) holds
+  # private additions. ~/AGENTS.md is the merge of the two - a real file, not a
+  # symlink, since no agent CLI has a portable include mechanism (codex has
+  # none at all). Rebuilt on every switch; after editing either part without
+  # switching, re-run the merge with the agents-sync alias.
+  home.activation.mergeAgentsMd = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    if [ -f "${dotfiles}/config/agents/AGENTS.local.md" ]; then
+      run /bin/sh -c "cat '${dotfiles}/config/agents/AGENTS.md' '${dotfiles}/config/agents/AGENTS.local.md' > \"$HOME/AGENTS.md\""
+    else
+      run /bin/sh -c "cat '${dotfiles}/config/agents/AGENTS.md' > \"$HOME/AGENTS.md\""
+    fi
+  '';
   home.file.".claude/CLAUDE.md".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/agents/AGENTS.md";
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/AGENTS.md";
 }
