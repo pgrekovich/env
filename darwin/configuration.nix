@@ -1,4 +1,4 @@
-{ user, lib, ... }:
+{ user, lib, pkgs, ... }:
 
 let
   # macOS system shortcuts live in com.apple.symbolichotkeys under numeric ids
@@ -31,6 +31,40 @@ let
   # Activation runs as root (postUserActivation is gone in 26.05), so drop into
   # the user's context the way nix-darwin writes its own user defaults.
   # Applied at login, like the other keyboard settings here.
+  # File types Neovide takes over from TextEdit. duti accepts either a UTI or
+  # a bare extension; extensions cover what macOS has no distinct UTI for.
+  editorFileTypes = [
+    "public.plain-text"
+    "public.source-code"
+    "public.shell-script"
+    "net.daringfireball.markdown"
+    "public.json"
+    "public.xml"
+    "public.yaml"
+    "conf"
+    "env"
+    "log"
+    "nix"
+    "toml"
+  ];
+
+  # nvim is a terminal binary with no .app bundle, so Launch Services cannot
+  # make it a handler at all. Neovide is a GUI frontend over the same nvim and
+  # the same ~/.config/nvim, and it does have a bundle. The id is read off the
+  # installed app instead of hardcoded, and this runs after the homebrew step
+  # that installs it.
+  setDefaultEditor = ''
+    if [ -e /Applications/Neovide.app ]; then
+      neovide_id=$(/usr/bin/defaults read /Applications/Neovide.app/Contents/Info CFBundleIdentifier)
+      for type in ${lib.concatStringsSep " " editorFileTypes}; do
+        launchctl asuser "$(id -u -- ${user})" sudo --user=${user} -- \
+          ${pkgs.duti}/bin/duti -s "$neovide_id" "$type" all || true
+      done
+    else
+      echo "Neovide is not installed, skipping default editor setup" >&2
+    fi
+  '';
+
   disableHotkey = id: what: ''
     # ${what}
     launchctl asuser "$(id -u -- ${user})" sudo --user=${user} -- \
@@ -160,7 +194,8 @@ in
   };
 
   system.activationScripts.postActivation.text =
-    lib.concatStrings (lib.mapAttrsToList disableHotkey disabledHotkeys);
+    lib.concatStrings (lib.mapAttrsToList disableHotkey disabledHotkeys)
+    + setDefaultEditor;
 
   nix-homebrew = {
     enable = true;
@@ -220,6 +255,8 @@ in
       "jordanbaird-ice"
       # ai cli that ships as a cask rather than a formula
       "codex"
+      # gui frontend for nvim, so macOS has an .app to hand files to
+      "neovide-app"
     ];
     # No masApps on purpose. mas needs an App Store login before the switch
     # and fails the whole activation when it can't reach one, so App Store
