@@ -1,0 +1,9 @@
+# Neovide reads this at startup. CLI flags and NEOVIDE_FRAME are useless here:
+# Finder launches the .app directly, so neither a shell env nor an argv reaches
+# it - the file is the only way to set this for double-clicked files.
+
+# Drop the macOS title bar. "buttonless" keeps the window resizable and keeps a
+# draggable strip at the top, it just removes the bar and the traffic lights.
+# "none" also works but the help text warns the window may stop being
+# resizable; "transparent" keeps the traffic lights and only drops the bar.
+frame = "buttonless"

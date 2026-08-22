@@ -221,6 +221,9 @@ in
   home.file.".config/herdr/plugins/config/herdr-navigator/config.toml".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/herdr/.config/herdr/plugins/config/herdr-navigator/config.toml";
 
+  home.file.".config/neovide/config.toml".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/neovide/.config/neovide/config.toml";
+
   home.file.".finicky.js".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/finicky/.finicky.js";
 
