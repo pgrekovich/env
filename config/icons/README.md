@@ -1,6 +1,11 @@
 # Icons
 
-`neovide.svg` is the source; `neovide.icns` is built from it:
+`neovide.svg` is the source; `neovide.icns` is built from it.
+
+The outline is a superellipse sampled at 720 points, not a rounded rect and
+definitely not a circle: 824x824 centred in a 1024 canvas with 100px margins,
+which is Apple's own icon grid, so it sits at the same size as every other
+icon in the Dock.
 
 ```sh
 nix run nixpkgs#resvg -- neovide.svg icon.png -w 1024 -h 1024
