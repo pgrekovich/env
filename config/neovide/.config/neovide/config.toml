@@ -11,3 +11,12 @@ frame = "buttonless"
 # "buttonless" still paints the file path across the top of the buffer. This
 # drops the text too, leaving the strip empty and draggable.
 title-hidden = true
+
+# Neovide calls setApplicationIconImage on startup, so it paints over whatever
+# Finder's "custom icon" put on the bundle - that is why a hand-set icon shows
+# for a second and then reverts. Pointing Neovide at the file instead is the
+# only route that sticks, and it survives cask upgrades, unlike editing the
+# app bundle (which macOS App Management blocks anyway).
+# Absolute because tilde expansion in this field is unverified; this is the one
+# line in the repo that assumes the username.
+icon = "/Users/ph/.dotfiles/config/icons/neovide.icns"
