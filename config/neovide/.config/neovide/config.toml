@@ -7,3 +7,7 @@
 # "none" also works but the help text warns the window may stop being
 # resizable; "transparent" keeps the traffic lights and only drops the bar.
 frame = "buttonless"
+
+# "buttonless" still paints the file path across the top of the buffer. This
+# drops the text too, leaving the strip empty and draggable.
+title-hidden = true
