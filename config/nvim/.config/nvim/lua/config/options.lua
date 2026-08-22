@@ -13,4 +13,10 @@ if vim.g.neovide then
   vim.g.neovide_cursor_animate_in_insert_mode = false
   vim.g.neovide_cursor_animate_command_line = false
   vim.g.neovide_cursor_vfx_mode = ""
+
+  -- Match Ghostty. Without this Neovide falls back to its own default size,
+  -- which reads noticeably smaller side by side. The family is spelled the way
+  -- CoreText registers it - `ghostty +list-fonts` resolves Ghostty's shorter
+  -- "JetBrainsMonoNL Nerd Font" to exactly this.
+  vim.o.guifont = "JetBrainsMonoNL Nerd Font Mono:h16"
 end
